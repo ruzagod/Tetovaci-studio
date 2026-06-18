@@ -354,8 +354,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapContainer = document.getElementById('studio-map');
 
     if (mapContainer) {
-        // Approximate coordinates for Umělecká 12, Praha 7 (Latitude: 50.10188, Longitude: 14.42880)
-        const coords = [50.10188, 14.42880];
+        // Souřadnice pro Pod Záhorskem 560/9, Plzeň (Latitude: 49.75966, Longitude: 13.38150)
+        const coords = [49.75966, 13.38150];
         
         // Initialize Map
         const map = L.map('studio-map', {
@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
         marker.bindPopup(`
             <div class="map-popup-content" style="color: #121212; font-family: 'Plus Jakarta Sans', sans-serif;">
                 <strong style="font-family: 'Cinzel', serif; font-size: 0.95rem; color: #0a0a0a;">Jana Tattoo & Art</strong>
-                <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #555;">Umělecká 452/12, Praha 7</p>
+                <p style="margin: 5px 0 0 0; font-size: 0.8rem; color: #555;">Pod Záhorskem 560/9, Plzeň</p>
             </div>
         `).openPopup();
 
