@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
 
             // Odeslání formuláře přes bezplatné AJAX rozhraní FormSubmit.co
-            fetch('https://formsubmit.co/ajax/kubaruza890@gmail.com', {
+            fetch('https://formsubmit.co/ajax/tattoo.by.janii@gmail.com', {
                 method: 'POST',
                 body: formData,
                 headers: {
