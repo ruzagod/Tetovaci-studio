@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie | Jana Tattoo & Art</title>
+    <meta name="description" content="Prohlédněte si portfolio mých autorských prací. Originální tetování na kůži a velkoplošné malby na stěny.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-internal">
+
+    <!-- Custom Cursor Effect -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Header / Navigation -->
+    <header class="main-header scrolled">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Jana<span>Tattoo & Art</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Domů</a>
+                <a href="o-mne.html" class="nav-link">O mně</a>
+                <a href="galerie.html" class="nav-link active">Galerie</a>
+                <a href="sluzby.html" class="nav-link">Služby</a>
+                <a href="jak-probiha.html" class="nav-link">Jak probíhá objednání</a>
+                <a href="pece.html" class="nav-link">Péče o tetování</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </nav>
+
+            <button class="burger-menu" aria-label="Menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="mobile-nav-link">Domů</a>
+            <a href="o-mne.html" class="mobile-nav-link">O mně</a>
+            <a href="galerie.html" class="mobile-nav-link active">Galerie</a>
+            <a href="sluzby.html" class="mobile-nav-link">Služby</a>
+            <a href="jak-probiha.html" class="mobile-nav-link">Jak probíhá objednání</a>
+            <a href="pece.html" class="mobile-nav-link">Péče o tetování</a>
+            <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- Content Area: Galerie -->
+    <main class="main-content">
+        <section id="galerie" class="gallery-section revealed">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Ukázky mé tvorby</span>
+                    <h1 class="section-title">Galerie</h1>
+                    <p class="section-description">Prohlédněte si portfolio autorských prací. Kliknutím na libovolný náhled otevřete fotku v detailním zobrazení.</p>
+                </div>
+
+                <!-- Gallery Tabs/Filters -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Všechna tvorba</button>
+                    <button class="filter-btn" data-filter="tattoo">Tetování</button>
+                    <button class="filter-btn" data-filter="mural">Malby zdí</button>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="gallery-grid">
+                    <!-- Item 1 (Tattoo) -->
+                    <div class="gallery-item" data-category="tattoo">
+                        <div class="gallery-item-inner">
+                            <img src="images/tattoo_1.svg" alt="Jemné květinové tetování na předloktí" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Květinový motiv</h3>
+                                    <span>Tetování</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Mural) -->
+                    <div class="gallery-item" data-category="mural">
+                        <div class="gallery-item-inner">
+                            <img src="images/mural_1.svg" alt="Moderní malba organických tvarů v obývacím pokoji" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Organické listy</h3>
+                                    <span>Malba zdi</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Tattoo) -->
+                    <div class="gallery-item" data-category="tattoo">
+                        <div class="gallery-item-inner">
+                            <img src="images/tattoo_2.svg" alt="Geometrické abstraktní tetování na rameni" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Abstraktní geometrie</h3>
+                                    <span>Tetování</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 (Mural) -->
+                    <div class="gallery-item" data-category="mural">
+                        <div class="gallery-item-inner">
+                            <img src="images/mural_2.svg" alt="Lineární geometrická malba v kancelářském prostoru" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Moderní linie</h3>
+                                    <span>Malba zdi</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 (Tattoo) -->
+                    <div class="gallery-item" data-category="tattoo">
+                        <div class="gallery-item-inner">
+                            <img src="images/tattoo_3.svg" alt="Jemné astronomické tetování se sluncem a měsícem" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Kosmické detaily</h3>
+                                    <span>Tetování</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 (Mural) -->
+                    <div class="gallery-item" data-category="mural">
+                        <div class="gallery-item-inner">
+                            <img src="images/mural_3.svg" alt="Krajinná malba hor v minimalistickém stylu v ložnici" class="gallery-img">
+                            <div class="gallery-item-overlay">
+                                <div class="gallery-item-info">
+                                    <h3>Severská krajina</h3>
+                                    <span>Malba zdi</span>
+                                    <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Obrázky v galerii jsou momentálně zástupné. Pro vložení vlastních děl jednoduše nahraďte soubory ve složce <code>images/</code>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Zavřít"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" aria-label="Předchozí"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Další"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img">
+            <div class="lightbox-caption">
+                <h3 class="lightbox-title"></h3>
+                <span class="lightbox-category"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        Jana<span>Tattoo & Art</span>
+                    </a>
+                    <p>Umění vtištěné do kůže i do prostoru kolem nás.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rychlé odkazy</h4>
+                    <ul>
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="o-mne.html">O mně</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="sluzby.html">Služby</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Užitečné informace</h4>
+                    <ul>
+                        <li><a href="jak-probiha.html">Jak probíhá objednání</a></li>
+                        <li><a href="pece.html">Péče o tetování</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jana Tattoo & Art. Všechna práva vyhrazena.</p>
+                <p class="credit">Vytvořil s citem pro umění <a href="#" target="_blank">Antigravity</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
