@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana Tattoo & Art | Exkluzivní tetovací studio a malby zdí</title>
+    <meta name="description" content="Moderní, umělecké a luxusní tetovací studio v čele s tatérkou Janou. Specializace na tetování na míru, originální návrhy motivů a umělecké malby na zeď.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor Effect -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#domu" class="logo">
+                Jana<span>Tattoo & Art</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#domu" class="nav-link active">Domů</a>
+                <a href="#o-mne" class="nav-link">O mně</a>
+                <a href="#galerie" class="nav-link">Galerie</a>
+                <a href="#sluzby" class="nav-link">Služby</a>
+                <a href="#jak-probiha" class="nav-link">Jak probíhá objednání</a>
+                <a href="#pece" class="nav-link">Péče o tetování</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </nav>
+
+            <button class="burger-menu" aria-label="Menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <nav class="mobile-nav-menu">
+            <a href="#domu" class="mobile-nav-link">Domů</a>
+            <a href="#o-mne" class="mobile-nav-link">O mně</a>
+            <a href="#galerie" class="mobile-nav-link">Galerie</a>
+            <a href="#sluzby" class="mobile-nav-link">Služby</a>
+            <a href="#jak-probiha" class="mobile-nav-link">Jak probíhá objednání</a>
+            <a href="#pece" class="mobile-nav-link">Péče o tetování</a>
+            <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="domu" class="hero-section">
+        <div class="hero-bg" style="background-image: url('images/hero_bg.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-glow">Jana</h1>
+            <p class="hero-subtitle">Tattoo & Fine Art</p>
+            <div class="hero-divider"></div>
+            <blockquote class="hero-quote">
+                „Tetování není jen ozdoba – je to umění života vepsané do kůže.“
+            </blockquote>
+            <div class="hero-buttons">
+                <a href="#galerie" class="btn btn-primary">Prohlédnout galerii</a>
+                <a href="#kontakt" class="btn btn-secondary">Objednat konzultaci</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#o-mne" aria-label="Přejít dolů">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-text">Scrolluj dolů</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section: O mně -->
+    <section id="o-mne" class="about-section scroll-reveal">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-frame">
+                        <img src="images/artist_jana.png" alt="Tatérka Jana" class="about-img">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Příběh za jehlou a štětcem</span>
+                    <h2 class="section-title">O mně</h2>
+                    <div class="about-text">
+                        <p class="lead-text">
+                            Jmenuji se Jana a věnuji se tetování i umělecké malbě zdí. Tvoření je pro mě způsob, jak proměňovat nápady, příběhy a emoce v originální díla, ať už na kůži nebo v prostoru kolem nás.
+                        </p>
+                        <p>
+                            Jako začínající tatérka přistupuji ke každému motivu s maximální pečlivostí a respektem. Věřím, že tetování by mělo být jedinečné stejně jako člověk, který ho nosí. Proto každý návrh vytvářím individuálně a na míru, aby co nejlépe vystihl osobnost, myšlenku nebo vzpomínku svého nositele.
+                        </p>
+                        <p>
+                            Zakládám si na poctivé práci, otevřené komunikaci a důrazu na detail. Mým cílem není jen vytvořit obrázek, ale originální dílo, které bude mít pro svého majitele skutečný význam.
+                        </p>
+                    </div>
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Originální návrhy</span>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fa-solid fa-fingerprint"></i>
+                            <span>Individuální přístup</span>
+                        </div>
+                        <div class="about-badge">
+                            <i class="fa-solid fa-gem"></i>
+                            <span>Důraz na detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Galerie -->
+    <section id="galerie" class="gallery-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Ukázky mé tvorby</span>
+                <h2 class="section-title">Galerie</h2>
+                <p class="section-description">Prohlédněte si portfolio mých autorských prací. Pro zobrazení detailu klikněte na libovolný obrázek.</p>
+            </div>
+
+            <!-- Gallery Tabs/Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Všechna tvorba</button>
+                <button class="filter-btn" data-filter="tattoo">Tetování</button>
+                <button class="filter-btn" data-filter="mural">Malby zdí</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="gallery-grid">
+                <!-- Item 1 (Tattoo) -->
+                <div class="gallery-item" data-category="tattoo">
+                    <div class="gallery-item-inner">
+                        <img src="images/tattoo_1.svg" alt="Jemné květinové tetování na předloktí" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Květinový motiv</h3>
+                                <span>Tetování</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Mural) -->
+                <div class="gallery-item" data-category="mural">
+                    <div class="gallery-item-inner">
+                        <img src="images/mural_1.svg" alt="Moderní malba organických tvarů v obývacím pokoji" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Organické listy</h3>
+                                <span>Malba zdi</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Tattoo) -->
+                <div class="gallery-item" data-category="tattoo">
+                    <div class="gallery-item-inner">
+                        <img src="images/tattoo_2.svg" alt="Geometrické abstraktní tetování na rameni" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Abstraktní geometrie</h3>
+                                <span>Tetování</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 (Mural) -->
+                <div class="gallery-item" data-category="mural">
+                    <div class="gallery-item-inner">
+                        <img src="images/mural_2.svg" alt="Lineární geometrická malba v kancelářském prostoru" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Moderní linie</h3>
+                                <span>Malba zdi</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 (Tattoo) -->
+                <div class="gallery-item" data-category="tattoo">
+                    <div class="gallery-item-inner">
+                        <img src="images/tattoo_3.svg" alt="Jemné astronomické tetování se sluncem a měsícem" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Kosmické detaily</h3>
+                                <span>Tetování</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 (Mural) -->
+                <div class="gallery-item" data-category="mural">
+                    <div class="gallery-item-inner">
+                        <img src="images/mural_3.svg" alt="Krajinná malba hor v minimalistickém stylu v ložnici" class="gallery-img">
+                        <div class="gallery-item-overlay">
+                            <div class="gallery-item-info">
+                                <h3>Severská krajina</h3>
+                                <span>Malba zdi</span>
+                                <div class="view-icon"><i class="fa-solid fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-note">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Obrázky v galerii jsou momentálně zástupné. Pro vložení vlastních děl jednoduše nahraďte soubory ve složce <code>images/</code>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Zavřít"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" aria-label="Předchozí"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Další"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img">
+            <div class="lightbox-caption">
+                <h3 class="lightbox-title"></h3>
+                <span class="lightbox-category"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Služby -->
+    <section id="sluzby" class="services-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Co vám mohu nabídnout</span>
+                <h2 class="section-title">Služby</h2>
+                <p class="section-description">Každému projektu, ať už jde o drobnost na kůži nebo velkou stěnu, věnuji stejnou dávku energie a umělecké vášně.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M12 8v8"/>
+                            <path d="M8 12h8"/>
+                        </svg>
+                    </div>
+                    <h3>Tetování na míru</h3>
+                    <p>Originální tetování vytvořené speciálně pro vás. Přetvářím vaše osobní nápady, vzpomínky a sny do trvalých děl na kůži s důrazem na čisté linie a stínování.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Návrhy motivů</h3>
+                    <p>Nemáte jasnou představu? Společně probereme vaše nápady a já vám nakreslím unikátní autorský návrh na míru, který bude odpovídat vaší osobnosti a anatomii těla.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Překrytí (Cover-up)</h3>
+                    <p>Máte starší nebo nepovedené tetování, které už nechcete? Pomohu vám ho citlivě a kreativně předělat či zakrýt novým motivem, který na kůži rádi ukážete.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Umělecká malba zdí</h3>
+                    <p>Oživte svůj domov, studio nebo firemní prostory. Navrhuji a ručně maluji velkoplošné designy přímo na stěny. Vytvářím atmosférická díla, která dodají prostoru duši.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Jak probíhá objednání -->
+    <section id="jak-probiha" class="process-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Cesta k vašemu tetování</span>
+                <h2 class="section-title">Jak probíhá objednání</h2>
+                <p class="section-description">Průběh od první myšlenky až po finální péči o zhojené dílo. Celým procesem vás provedu krok za krokem.</p>
+            </div>
+
+            <!-- Interactive Process Steps -->
+            <div class="process-container">
+                <div class="process-line"></div>
+                
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Konzultace</h3>
+                        <p>Nejprve se spojíme online nebo se sejdeme osobně. Probereme vaši představu, umístění, velikost, styl a motiv tetování.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Návrh motivu</h3>
+                        <p>Na základě našich podkladů nakreslím originální autorský návrh přímo pro vaše tělo a zašlu vám ho k prvnímu nahlédnutí.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Schválení návrhu</h3>
+                        <p>Společně doladíme detaily návrhu. Vaše maximální spokojenost s výsledným motivem je pro mě prioritou před samotnou realizací.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Termín tetování</h3>
+                        <p>V dohodnutý den se sejdeme v čistém, bezpečném a přátelském prostředí studia, kde motiv přeneseme na kůži a provedeme samotné tetování.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Následná péče</h3>
+                        <p>Po dokončení tetování vám vysvětlím, jak o kůži správně pečovat. Dostanete ode mě ochrannou folii a podrobný návod k hojení.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Péče o tetování -->
+    <section id="pece" class="care-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Jak na bezproblémové hojení</span>
+                <h2 class="section-title">Péče o tetování</h2>
+                <p class="section-description">Kvalitní výsledek závisí z 50 % na samotném tetování a z 50 % na vaší následné péči. Zde jsou základní kroky pro perfektní zhojení.</p>
+            </div>
+
+            <div class="care-grid">
+                <div class="care-box phase-1">
+                    <div class="care-box-header">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>První dny (24–72 hodin)</h3>
+                    </div>
+                    <ul class="care-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Ochranná fólie:</strong> Nechte fólii (např. Dermalize) nalepenou po dobu 24 hodin, případně dle domluvy až 3–5 dní, pokud drží a nehromadí se pod ní velké množství tekutiny.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>První omytí:</strong> Po sundání fólie tetování jemně omyjte vlažnou vodou a antibakteriálním mýdlem bez parfemace. Nepoužívejte houbu, pouze čisté ruce.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Osušení:</strong> Lehce osušte čistou papírovou utěrkou. Nikdy tetování nedřete klasickým ručníkem.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="care-box phase-2">
+                    <div class="care-box-header">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <h3>Dlouhodobé hojení (2–4 týdny)</h3>
+                    </div>
+                    <ul class="care-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Mazání krémem:</strong> Po cca 2-3 dnech začněte tetování tenkou vrstvou mazat doporučeným krémem (např. Bepanthen Baby nebo speciální krém na tetování) 3–4x denně.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Neskrabat stroupky:</strong> V průběhu hojení se mohou tvořit stroupky a tetování bude svědit. Nikdy je neodlupujte ani neškrábejte, zničili byste pigment.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Žádná koupel a sport:</strong> Vyhněte se dlouhému koupání ve vaně, bazénech, sauně a soláriu po dobu minimálně 3 týdnů. Omezte také těžkou fyzickou aktivitu.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="care-warning-box">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="warning-text">
+                    <h4>Zlaté pravidlo ochrany před sluncem</h4>
+                    <p>Zhojené tetování vždy (i po letech) chraňte před přímým sluncem opalovacím krémem s vysokým faktorem <strong>SPF 50</strong>. Sluneční paprsky rozkládají tetovací inkoust a způsobují blednutí barev.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Kontakt -->
+    <section id="kontakt" class="contact-section scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Spojme se</span>
+                <h2 class="section-title">Kontakt</h2>
+                <p class="section-description">Máte dotazy, chcete zkonzultovat svůj nápad nebo si rovnou zarezervovat termín? Neváhejte mi napsat nebo zavolat.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Details -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Telefon</span>
+                                <a href="tel:+420777123456">+420 777 123 456</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>E-mail</span>
+                                <a href="mailto:info@janatattoo.cz">info@janatattoo.cz</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Instagram</span>
+                                <a href="https://instagram.com" target="_blank" rel="noopener">@jana_tattoo_art</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Adresa studia</span>
+                                <p>Umělecká 452/12, 170 00 Praha 7</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="map-wrapper">
+                        <div id="studio-map"></div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <h3>Napište mi</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Jméno a příjmení</label>
+                            <input type="text" id="name" name="name" required placeholder="Napište své jméno...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="Napište svůj e-mail...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Typ služby</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Vyberte službu...</option>
+                                <option value="tetovani">Tetování na míru</option>
+                                <option value="navrh">Návrh motivu</option>
+                                <option value="prekryti">Překrytí (Cover-up)</option>
+                                <option value="malba">Umělecká malba zdí</option>
+                                <option value="jine">Jiný dotaz / konzultace</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Vaše představa a zpráva</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Popište svou představu (velikost, umístění, styl)..."></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Souhlasím se zpracováním osobních údajů pro účely vyřízení poptávky.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Odeslat poptávku</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Success Toast (Hidden by default) -->
+                    <div class="form-success-message" id="form-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Zpráva byla úspěšně odeslána!</h4>
+                        <p>Děkuji za zájem. Ozvu se vám zpět na e-mail co nejdříve, obvykle do 48 hodin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#domu" class="logo">
+                        Jana<span>Tattoo & Art</span>
+                    </a>
+                    <p>Umění vtištěné do kůže i do prostoru kolem nás.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rychlé odkazy</h4>
+                    <ul>
+                        <li><a href="#domu">Domů</a></li>
+                        <li><a href="#o-mne">O mně</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#sluzby">Služby</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Užitečné informace</h4>
+                    <ul>
+                        <li><a href="#jak-probiha">Jak probíhá objednání</a></li>
+                        <li><a href="#pece">Péče o tetování</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jana Tattoo & Art. Všechna práva vyhrazena.</p>
+                <p class="credit">Vytvořil s citem pro umění <a href="#" target="_blank">Antigravity</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet Map JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

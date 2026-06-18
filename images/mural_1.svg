@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#161616"/>
+  <!-- Elegant abstract wall mural mockup -->
+  <path d="M 100 500 Q 250 200 400 400 T 700 200" stroke="#c5a880" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M 100 450 Q 300 150 500 350 T 700 150" stroke="#c5a880" stroke-width="1" fill="none" opacity="0.15"/>
+  <path d="M 200 550 C 300 400, 450 300, 600 500" stroke="#c5a880" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <circle cx="250" cy="250" r="80" stroke="#c5a880" stroke-width="1" fill="none" opacity="0.1"/>
+  <circle cx="550" cy="350" r="100" stroke="#c5a880" stroke-width="1" fill="none" opacity="0.1"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#c5a880" letter-spacing="4">MALBA ZDI #1</text>
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#888" letter-spacing="2">Klikněte pro náhled</text>
+</svg>
