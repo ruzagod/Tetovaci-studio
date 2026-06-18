@@ -1275,6 +1275,12 @@ p {
     padding-right: 20px;
 }
 
+.form-group select option {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: var(--font-body);
+}
+
 .form-group input:focus, 
 .form-group select:focus, 
 .form-group textarea:focus {

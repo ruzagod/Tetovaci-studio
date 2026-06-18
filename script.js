@@ -299,32 +299,51 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Simulate form submission animation
+            // Získání elementů tlačítka
             const submitBtn = contactForm.querySelector('.btn-submit');
             const submitText = submitBtn.querySelector('span');
             const submitIcon = submitBtn.querySelector('i');
 
-            // Set loading state
+            // Aktivace načítacího stavu
             submitBtn.style.pointerEvents = 'none';
             submitText.textContent = 'Odesílám...';
             submitIcon.className = 'fa-solid fa-spinner fa-spin';
 
-            setTimeout(() => {
-                // Show success container
-                formSuccess.classList.add('show');
-                
-                // Reset form fields
-                contactForm.reset();
+            const formData = new FormData(contactForm);
 
-                // Auto-close success message after 7 seconds
+            // Odeslání formuláře přes bezplatné AJAX rozhraní FormSubmit.co
+            fetch('https://formsubmit.co/ajax/kubaruza890@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === 'true' || data.success === true) {
+                    // Zobrazení potvrzení o úspěchu
+                    formSuccess.classList.add('show');
+                    
+                    // Reset polí formuláře
+                    contactForm.reset();
+                } else {
+                    alert('Došlo k chybě při odesílání formuláře. Zkuste to prosím znovu nebo mě kontaktujte přímo.');
+                }
+            })
+            .catch(error => {
+                console.error('Chyba při odesílání:', error);
+                alert('Chyba spojení. Zkontrolujte prosím připojení k internetu.');
+            })
+            .finally(() => {
+                // Po 7 sekundách schováme potvrzení a reaktivujeme tlačítko
                 setTimeout(() => {
                     formSuccess.classList.remove('show');
                     submitBtn.style.pointerEvents = 'auto';
                     submitText.textContent = 'Odeslat poptávku';
                     submitIcon.className = 'fa-solid fa-paper-plane';
                 }, 7000);
-
-            }, 1500); // Simulate network delay
+            });
         });
     }
 
